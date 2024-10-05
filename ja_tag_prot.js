@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name         JustAnswer Tag Protection
 // @namespace    http://tampermonkey.net/
-// @version      2024-09-29
+// @version      2024-09-30
+// @updateURL    https://raw.githubusercontent.com/nlichtenstein1/gists/refs/heads/main/ja_tag_prot.js
+// @downloadURL  https://raw.githubusercontent.com/nlichtenstein1/gists/refs/heads/main/ja_tag_prot.js
 // @description  try to take over the world!
 // @author       You
 // @match        https://professional-secure.justanswer.com/oprc/*
