@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         JustAnswer Tag Protection
 // @namespace    http://tampermonkey.net/
-// @version      2024-09-30
+// @version      2024-10-05.0
 // @updateURL    https://raw.githubusercontent.com/nlichtenstein1/gists/refs/heads/main/ja_tag_prot.js
 // @downloadURL  https://raw.githubusercontent.com/nlichtenstein1/gists/refs/heads/main/ja_tag_prot.js
 // @description  try to take over the world!
@@ -38,12 +38,13 @@
 
     function apply_protection(li_node) {
         const text = li_node.textContent;
-        if ((text.includes("juzek") || text.includes("@")) && !text.includes("@AnneH0912")) {
+        if ((text.includes("@")) && !text.includes("@AnneH0912")) {
             console.log("Found a tag in Question");
             console.debug(text);
             li_node.style.color = "red";
         } else {
             console.debug("Parsed Question");
+            console.debug(text);
         }
     }
 
@@ -93,7 +94,7 @@
         console.log("Loading JustAnswer Tag Protection");
         main();
         console.log("Loaded JustAnswer Tag Protection v0.1");
-    }, 100)});
+    }, 10000)});
     console.log("Configured JustAnswer Tag Protection Listener");
 
 })();
